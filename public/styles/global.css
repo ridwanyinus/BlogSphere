@@ -1,0 +1,367 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+body {
+  font-family: sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+header {
+  background-color: #333333;
+  margin-bottom: 2rem;
+}
+
+.container {
+  padding: 2rem 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.card {
+  padding: 1rem;
+  background: #eaeaea;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 0.2rem;
+  height: 250px;
+  object-fit: cover;
+}
+
+.card-author {
+  font-size: 0.8rem;
+  margin-top: 0.3rem;
+}
+
+.card-title {
+  overflow: hidden;
+  display: -webkit-box;
+  line-clamp: 2;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.card h2 {
+  color: gray;
+  font-size: 1rem;
+  margin-top: 0.5rem;
+}
+
+.desc-wrapper {
+  overflow: hidden;
+  display: -webkit-box;
+  line-clamp: 3;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+
+.card-desc {
+  font-size: 1.3rem;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+
+.card-footer a {
+  font-size: 1.1rem;
+  font-weight: 500;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.navbar {
+  display: flex;
+  margin: 0 auto;
+  padding: 1rem 0;
+  max-width: 1115px;
+  align-items: center;
+}
+
+.navbar a {
+  text-decoration: none;
+  text-transform: capitalize;
+}
+
+.write {
+  display: inline-flex;
+  background-color: aliceblue;
+  padding: 0.3rem 0.5rem;
+}
+
+.write a {
+  font-size: 0.9rem;
+  width: max-content;
+  color: #333333;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  gap: 2rem;
+}
+
+nav a {
+  font-size: 1.3rem;
+  color: azure;
+  font-weight: 200;
+}
+
+.logo {
+  color: whitesmoke;
+  font-size: 24px;
+  text-align: left;
+}
+
+.main-blog_container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  width: 100%;
+  padding: 0 3rem;
+  gap: 0 7rem;
+}
+
+.main-blog_header {
+  padding: 0 3rem;
+}
+
+.main-title {
+  font-size: 52px;
+  margin-top: 2rem;
+}
+
+.line {
+  background-color: #333333;
+  height: 2px;
+  width: 100%;
+  margin: 2.5rem 0 2.2rem;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box {
+  position: absolute;
+  background-color: brown;
+  color: wheat;
+  font-size: 1.1rem;
+  padding: 0.3rem 0.7rem;
+  font-weight: 600;
+}
+
+.commission {
+  font-size: 13px;
+  color: #737373;
+}
+
+.main-desc {
+  font-size: 1rem;
+  margin: 1rem 0;
+  width: 110ch;
+  color: #525252;
+}
+
+.main-author {
+  color: blue;
+}
+
+.main-author span {
+  color: #737373;
+}
+
+.main-published {
+  color: black;
+}
+
+.auth-publish_container {
+  display: flex;
+  gap: 1rem;
+}
+
+.main-img {
+  margin-top: 1.5rem;
+  max-width: 100%;
+  min-width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.img-copyright {
+  font-size: 12px;
+  margin-top: 0.2rem;
+}
+
+.main-content {
+  white-space: pre-wrap;
+  margin: 1rem;
+}
+
+.recent-blog {
+  min-width: 400px;
+}
+
+footer {
+  background-color: #333333;
+  padding: 1rem 0;
+  margin-top: 4rem;
+}
+
+footer p {
+  text-align: center;
+  color: azure;
+}
+
+#about {
+  min-height: 100vh;
+}
+
+.about {
+  min-height: 70vh;
+  width: 100ch;
+  padding: 3rem 5rem;
+}
+
+.about h1 {
+  font-size: 2.5rem;
+}
+
+.about p {
+  padding: 3rem 0;
+  font-size: 1.5rem;
+}
+
+.write-container {
+  min-height: 70vh;
+  max-width: 1115px;
+  margin: 0 auto;
+  padding-top: 2rem;
+}
+
+.write-container h1 {
+  font-size: 48px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  margin-bottom: 2rem;
+}
+
+.write-label {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  margin-top: 1rem;
+  color: black;
+}
+
+.write-input {
+  border: 0.5px solid whitesmoke;
+  outline: 1px solid #737373;
+  padding: 0.8rem 1rem;
+  width: 100%;
+}
+
+.write-input_container {
+  max-width: 1000px;
+  padding: 0 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.write-file {
+  cursor: pointer;
+}
+
+.publish {
+  max-width: 1000px;
+  padding: 1rem 5rem;
+  width: 100%;
+  cursor: pointer;
+}
+
+.delete-container {
+  max-width: 1000px;
+  padding: 1rem 5rem;
+  display: flex;
+  gap: 3rem;
+  margin-top: 2rem;
+}
+
+#delete-blog {
+  padding: 0.5rem 0.9rem;
+  cursor: pointer;
+  background-color: red;
+  border: none;
+  color: white;
+  border-radius: 0.2rem;
+}
+
+#update-blog {
+  background-color: #333333;
+  color: white;
+  border: none;
+  padding: 0.5rem 0.9rem;
+  cursor: pointer;
+  border-radius: 0.2rem;
+  text-decoration: none;
+}
+
+.update-blog_container {
+  min-height: 70vh;
+}
+
+.recent-blog_content {
+  display: flex;
+  gap: 4rem 0.9rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.recent-blog_content:last-child {
+  border-bottom: none;
+}
+
+.recent-blog_content h3 {
+  font-size: 0.9rem;
+  margin-bottom: 0.3rem;
+  margin-top: 0.5rem;
+  min-width: 220px;
+}
+
+.recent-blog_content p {
+  font-size: 0.8rem;
+  color: #737373;
+}
+
+.recent-blog_content img {
+  width: 160px;
+  height: 100px;
+}
+
+.latest-line {
+  background-color: #0b008a;
+  height: 2px;
+  width: 100%;
+  margin: 2.5rem 0 2.2rem;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.latest-box {
+  position: absolute;
+  background-color: #0b008a;
+  color: white;
+  font-size: 1.1rem;
+  padding: 0.3rem 0.7rem;
+  font-weight: 600;
+}

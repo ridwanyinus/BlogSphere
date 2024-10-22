@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/global.css" />
+    <link rel="icon" type="image/jpeg" href="/b.jpeg" />
+    <title>Write Blog - BlogSphere</title>
+  </head>
+  <body>
+    <header><%- include('partials/header.ejs') %></header>
+    <section class="write-container">
+      <h1>Publish Blog</h1>
+
+      <form action="/publish" method="post" enctype="multipart/form-data">
+        <div class="write-input_container">
+          <label class="write-label" for="title">Title</label>
+          <input type="text" class="write-input" name="title" required />
+        </div>
+
+        <div class="write-input_container">
+          <label class="write-label" for="author">Author</label>
+          <input type="text" class="write-input" name="author" />
+        </div>
+
+        <div class="write-input_container">
+          <label class="write-label" for="file">Image</label>
+          <input type="file" accept="image/png, image/jpeg, image/jpg" name="file" class="write-file" />
+        </div>
+
+        <div class="write-input_container">
+          <label class="write-label" for="description">Description</label>
+          <input type="text" class="write-input" name="description" required />
+        </div>
+
+        <div class="write-input_container">
+          <label class="write-label" for="content">Content</label>
+          <textarea name="content" cols="30" rows="10" class="write-input" required></textarea>
+        </div>
+
+        <div class="publish">
+          <button value="submit" type="submit" class="publish">Publish</button>
+        </div>
+      </form>
+    </section>
+    <%- include('partials/footer.ejs') %>
+  </body>
+</html>

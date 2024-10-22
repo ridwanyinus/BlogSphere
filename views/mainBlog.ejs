@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/styles/global.css" />
+    <link rel="icon" type="image/jpeg" href="/b.jpeg" />
+    <title>Main Blog - BlogSphere</title>
+  </head>
+  <body>
+    <header><%-include ('partials/header.ejs')%></header>
+
+    <section class="main-blog_header">
+      <div class="line">
+        <div class="box">News</div>
+      </div>
+      <p class="commission">This article is part of <%= content.author %> Deals, produced separately from the editorial team. We may earn a commission when you buy through links on the site.</p>
+      <h1 class="main-title"><%=content.title %></h1>
+      <p class="main-desc"><%= content.description %></p>
+      <div class="auth-publish_container">
+        <p class="main-author"><span>By</span> <%= content.author %></p>
+        <p class="main-published">Published <%= content.publishedAt %></p>
+      </div>
+    </section>
+
+    <section class="main-blog_container">
+      <section>
+        <img class="main-img" src="<%= content.urlToImage %>" alt="article-image" />
+        <p class="img-copyright">© <%= content.author %></p>
+        <p class="main-content"><%= content.content %></p>
+      </section>
+      <section class="recent-blog">
+        <div class="latest-line">
+          <div class="latest-box">LATEST BLOG</div>
+        </div>
+        <% recent.forEach(element => {%>
+        <a href="/view/<%= element.id %>" class="recent-blog_content">
+          <div>
+            <h3><%= element.title %></h3>
+            <p><%= element.publishedAt %></p>
+          </div>
+
+          <div>
+            <img class="" src="<%= element.urlToImage %>" alt="article image cover" />
+          </div>
+        </a>
+        <% }); %>
+      </section>
+    </section>
+
+    <div class="delete-container">
+      <form action="/delete-blog/<%= content.id %>" method="POST" onsubmit="return confirm('Are you sure you want to delete this post?');">
+        <button type="submit" id="delete-blog">DELETE BLOG</button>
+      </form>
+      <a href="/updateBlog/<%= content.id %>" id="update-blog">Edit Blog</a>
+    </div>
+
+    <%-include ('partials/footer.ejs')%>
+  </body>
+</html>

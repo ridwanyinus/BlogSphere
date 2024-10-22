@@ -7,7 +7,7 @@ import path from 'path';
 
 const app = express();
 const dataFilePath = './data.json';
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {

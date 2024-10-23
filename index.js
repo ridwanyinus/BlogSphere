@@ -53,7 +53,7 @@ app.get('/', async (req, res) => {
     blog.sort((a, b) => b.id - a.id);
     res.render('index.ejs', { content: result });
   } catch (error) {
-    console.error(JSON.stringify(error.response.data));
+    res.status(404).send('Post not found');
   }
 });
 

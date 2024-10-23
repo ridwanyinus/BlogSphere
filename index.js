@@ -56,7 +56,6 @@ app.get('/', async (req, res) => {
     res.status(404).send('Post not found');
   }
 });
-
 app.get('/about', (req, res) => {
   res.render('about');
 });
@@ -121,7 +120,6 @@ app.post('/publish', upload.single('file'), (req, res) => {
 
     // Redirect to the homepage after publishing
     res.redirect('/');
-    window.location.reload();
   } catch (error) {
     console.error('Error publishing post:', error);
     res.status(500).send('Error publishing post');

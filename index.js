@@ -49,7 +49,7 @@ function writeData(data) {
 
 app.get('/', async (req, res) => {
   try {
-    const result = await axios.get('http://localhost:3000/api');
+    const result = await axios.get('https://blog-spherex.onrender.com/api');
     blog.sort((a, b) => b.id - a.id);
     res.render('index.ejs', { content: result });
   } catch (error) {

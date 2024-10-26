@@ -11,22 +11,22 @@
     <header><%-include ('partials/header.ejs')%></header>
 
     <section class="container">
-      <%if(content ){%> <% for(let i = 0; i < content.data.length; i++){%>
+      <% for(let i = 0; i < content.data.length; i++){ %>
       <div class="card">
         <img src="<%= content.data[i].urlToImage %>" alt="cover" />
-        <p class="card-author"><%=content.data[i].author %></p>
+        <p class="card-author"><%= content.data[i].author %></p>
         <div class="card-title">
-          <h2><%=content.data[i].title %></h2>
+          <h2><%= content.data[i].title %></h2>
         </div>
         <div class="desc-wrapper">
-          <p class="card-desc"><%=content.data[i].description %></p>
+          <p class="card-desc"><%= content.data[i].description %></p>
         </div>
         <div class="card-footer">
-          <p><%=content.data[i].publishedAt %></p>
+          <p><%= content.data[i].publishedAt %></p>
           <a href="/view/<%= content.data[i].id %>">View All</a>
         </div>
       </div>
-      <%}%> <%}%>
+      <% } %>
     </section>
     <%-include ('partials/footer.ejs')%>
   </body>

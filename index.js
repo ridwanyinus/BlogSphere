@@ -48,7 +48,7 @@ app.get('/', async (req, res) => {
     blog.sort((a, b) => b.id - a.id);
     res.render('index.ejs', { content: result });
   } catch (error) {
-    res.status(404).send({ error: 'Post not found' });
+    res.status(404).send('Post not found');
   }
 });
 

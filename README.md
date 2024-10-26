@@ -6,7 +6,7 @@
   </a>
 </p>
 
-> BlogSphere is a modern blogging platform built with Node.js, Express, and MongoDB, designed for seamless content creation and management. It provides features such as image uploads, author details, and RESTful API routes, making it easy for users to publish and explore dynamic content.
+> BlogSphere is a simple blogging platform built with Node.js, Express, and MongoDB, designed for seamless content creation and management. It provides features such as image uploads, author details, and RESTful API routes, making it easy for users to publish and explore dynamic content.
 
 ### ✨ [Demo](https://blog-spherex.onrender.com/)
 
@@ -32,12 +32,13 @@ npm run test
 
 👤 **Ridwan Yunus**
 
-* Website: https://ridwanyinus.is-a.dev
-* Github: [@ridwanyinus](https://github.com/ridwanyinus)
+- Website: https://ridwanyinus.is-a.dev
+- Github: [@ridwanyinus](https://github.com/ridwanyinus)
 
 ## Show your support
 
 Give a ⭐️ if this project helped you!
 
-***
+---
+
 _This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_

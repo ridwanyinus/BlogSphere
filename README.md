@@ -1,3 +1,5 @@
+![Screenshot 2024-10-26 221327](https://github.com/user-attachments/assets/3d1fe9a1-3fa6-44d0-ae00-305782dc720d)
+
 <h1 align="center">Welcome to blogsphere 👋</h1>
 <p>
   <img alt="Version" src="https://img.shields.io/badge/version-1.0.0-blue.svg?cacheSeconds=2592000" />

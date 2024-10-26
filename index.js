@@ -37,7 +37,6 @@ function readData() {
 
 let blog = readData();
 
-
 // Utility function to write data to the JSON file
 function writeData(data) {
   fs.writeFileSync(dataFilePath, JSON.stringify(data, null, 2), 'utf8');
@@ -49,7 +48,7 @@ app.get('/', async (req, res) => {
     blog.sort((a, b) => b.id - a.id);
     res.render('index.ejs', { content: result });
   } catch (error) {
-    res.status(404).send(error.response.data);
+    res.status(404).send('404 Not Found');
   }
 });
 
@@ -76,7 +75,7 @@ app.get('/view/:id', (req, res) => {
   if (post) {
     res.render('mainBlog', { content: post, recent: recentBlog });
   } else {
-    res.status(404).send(error.response.data);
+    res.status(404).send('404 Not Found');
   }
 });
 
@@ -86,7 +85,7 @@ app.get('/updateBlog/:id', (req, res) => {
   if (blogUpdate) {
     res.render('updateBlog', { content: blogUpdate });
   } else {
-    res.status(404).send(error.response.data);
+    res.status(404).send('404 Not Found');
   }
 });
 

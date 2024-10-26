@@ -1,5 +1,5 @@
 {
-  "name": "blogapp",
+  "name": "blogsphere",
   "version": "1.0.0",
   "main": "index.js",
   "type": "module",
@@ -7,10 +7,17 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index.js"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "blogging",
+    "content management",
+    "nodejs",
+    "express",
+    "mongodb",
+    "REST API"
+  ],
+  "author": "Ridwan Yunus",
   "license": "ISC",
-  "description": "",
+  "description": "BlogSphere is a modern blogging platform built with Node.js, Express, and MongoDB, designed for seamless content creation and management. It provides features such as image uploads, author details, and RESTful API routes, making it easy for users to publish and explore dynamic content.",
   "dependencies": {
     "axios": "^1.7.7",
     "body-parser": "^1.20.3",

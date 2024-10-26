@@ -1,5 +1,6 @@
 
 <h1 align="center">Welcome to blogsphere 👋</h1>
+
 ![Screenshot 2024-10-26 221327](https://github.com/user-attachments/assets/55a94df1-b9f1-4e21-b4ad-27d22c2ae1b8)
 
 

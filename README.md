@@ -1,6 +1,7 @@
 
 <h1 align="center">Welcome to blogsphere 👋</h1>
-![Screenshot 2024-10-26 221327](https://github.com/user-attachments/assets/3d1fe9a1-3fa6-44d0-ae00-305782dc720d)
+![Screenshot 2024-10-26 221327](https://github.com/user-attachments/assets/55a94df1-b9f1-4e21-b4ad-27d22c2ae1b8)
+
 
 <p>
   <img alt="Version" src="https://img.shields.io/badge/version-1.0.0-blue.svg?cacheSeconds=2592000" />
@@ -16,7 +17,9 @@
 ## Install
 
 ```sh
-npm install
+npm install![Screenshot 2024-10-26 221327](https://github.com/user-attachments/assets/64c4140b-0bf3-4076-91a6-94e0d6ab7228)
+![Screenshot 2024-10-26 221327](https://github.com/user-attachments/assets/c4123101-00b4-4e17-99f2-b4a6a8ec61bf)
+
 ```
 
 ## Usage

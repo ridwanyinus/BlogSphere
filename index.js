@@ -37,10 +37,6 @@ function readData() {
 
 let blog = readData();
 
-function sortUp() {
-  const sortBlogUp = blog.sort((a, b) => a.id - b.id);
-  return sortBlogUp;
-}
 
 // Utility function to write data to the JSON file
 function writeData(data) {
@@ -49,13 +45,14 @@ function writeData(data) {
 
 app.get('/', async (req, res) => {
   try {
-    const result = await axios.get('https://blog-spherex.onrender.com/api');
+    const result = await axios.get('http:localhost:3000/api');
     blog.sort((a, b) => b.id - a.id);
     res.render('index.ejs', { content: result });
   } catch (error) {
-    res.status(404).send('Post not found');
+    res.status(404).send(error.response.data);
   }
 });
+
 app.get('/about', (req, res) => {
   res.render('about');
 });
@@ -79,7 +76,7 @@ app.get('/view/:id', (req, res) => {
   if (post) {
     res.render('mainBlog', { content: post, recent: recentBlog });
   } else {
-    res.status(404).send('Post not found');
+    res.status(404).send(error.response.data);
   }
 });
 
@@ -89,7 +86,7 @@ app.get('/updateBlog/:id', (req, res) => {
   if (blogUpdate) {
     res.render('updateBlog', { content: blogUpdate });
   } else {
-    res.status(404).send('Post not found');
+    res.status(404).send(error.response.data);
   }
 });
 
@@ -121,7 +118,6 @@ app.post('/publish', upload.single('file'), (req, res) => {
     // Redirect to the homepage after publishing
     res.redirect('/');
   } catch (error) {
-    console.error('Error publishing post:', error);
     res.status(500).send('Error publishing post');
   }
 });

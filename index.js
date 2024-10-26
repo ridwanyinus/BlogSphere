@@ -75,7 +75,7 @@ app.get('/view/:id', (req, res) => {
   if (post) {
     res.render('mainBlog', { content: post, recent: recentBlog });
   } else {
-    res.status(404).send('404 Not Found');
+    res.status(404).send({ error: 'Post not found' });
   }
 });
 
@@ -85,7 +85,7 @@ app.get('/updateBlog/:id', (req, res) => {
   if (blogUpdate) {
     res.render('updateBlog', { content: blogUpdate });
   } else {
-    res.status(404).send('404 Not Found');
+    res.status(404).send({ error: 'Post not found' });
   }
 });
 

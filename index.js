@@ -3,7 +3,6 @@ import axios from 'axios';
 import bodyParser from 'body-parser';
 import fs from 'fs';
 import multer from 'multer';
-import path from 'path';
 
 const app = express();
 const dataFilePath = './data.json';
@@ -14,7 +13,6 @@ const storage = multer.diskStorage({
     cb(null, 'public/uploads/'); // Save files in the 'public/uploads/' folder
   },
   filename: (req, file, cb) => {
-    const uniqueSuffix = Date.now() + path.extname(file.originalname); // Use the original extension
     cb(null, Date.now() + '-' + file.originalname); // Save with unique timestamp and original name
   },
 });
@@ -27,7 +25,6 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static('public'));
 
 // Utility function to read data from the JSON file
-
 function readData() {
   const data = fs.readFileSync(dataFilePath, 'utf8');
   let articles = JSON.parse(data); // First, parse the JSON string
@@ -118,7 +115,7 @@ app.post('/publish', upload.single('file'), (req, res) => {
 
 // delete
 app.post('/delete-blog/:id', (req, res) => {
-  const blogId = req.params.id; // Get the ID from the URL parameters
+  const blogId = req.params.id;
   const updatedBlog = blog.filter((u) => u.id !== parseInt(blogId)); // Filter out the blog to be deleted
 
   if (blog.length !== updatedBlog.length) {
@@ -127,7 +124,7 @@ app.post('/delete-blog/:id', (req, res) => {
     res.redirect('/');
     res.status(204).send(); // Send a 204 No Content response
   } else {
-    res.status(404).json({ message: 'Blog not found' }); // Send 404 if blog not found
+    res.status(404).json({ message: 'Blog not found' });
   }
 });
 
@@ -154,10 +151,9 @@ app.post('/edit-blog/:id', upload.single('file'), (req, res) => {
   // Replace the old blog entry with the updated one
   blog[blogIndex] = updatedBlog;
 
-  // Write the updated blog array back to the JSON file
   writeData(blog);
 
-  res.redirect('/'); // Redirect or render a view with the updated blog
+  res.redirect('/');
 });
 
 app.listen(port, () => {

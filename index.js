@@ -44,7 +44,7 @@ function writeData(data) {
 
 app.get('/', async (req, res) => {
   try {
-    const result = await axios.get('https://blog-spherex.onrender.com/api');
+    const result = await axios.get('http://localhost:3000/api');
     blog.sort((a, b) => b.id - a.id);
     res.render('index.ejs', { content: result });
   } catch (error) {
@@ -113,8 +113,7 @@ app.post('/publish', upload.single('file'), (req, res) => {
 
     // Write the updated data back to the file
     fs.writeFileSync(dataFilePath, JSON.stringify(existingData, null, 2), 'utf8');
-
-    // Redirect to the homepage after publishing
+    res.render('WorkInProgress');
     res.redirect('/');
   } catch (error) {
     res.status(500).send('Error publishing post');

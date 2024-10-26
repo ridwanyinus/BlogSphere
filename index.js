@@ -93,26 +93,22 @@ app.get('/updateBlog/:id', (req, res) => {
 app.post('/publish', upload.single('file'), (req, res) => {
   let existingData = [];
   try {
-    // Read existing data from the JSON file
-    const fileContent = fs.readFileSync(dataFilePath, 'utf8');
-    existingData = JSON.parse(fileContent);
+    // const fileContent = fs.readFileSync(dataFilePath, 'utf8');
+    // existingData = JSON.parse(fileContent);
 
-    // Create a new post object
-    const newPost = {
-      id: existingData.length, // Use length of existing data to set a new unique ID
-      author: req.body.author,
-      title: req.body.title,
-      description: req.body.description,
-      urlToImage: req.file ? `/uploads/${req.file.filename}` : res.send('Please add an Image!'),
-      publishedAt: formatDate(new Date()), // Ensure formatDate function is defined
-      content: req.body.content,
-    };
+    // const newPost = {
+    //   id: existingData.length,
+    //   author: req.body.author,
+    //   title: req.body.title,
+    //   description: req.body.description,
+    //   urlToImage: req.file ? `/uploads/${req.file.filename}` : res.send('Please add an Image!'),
+    //   publishedAt: formatDate(new Date()),
+    //   content: req.body.content,
+    // };
 
-    // Append the new post to existing data
-    existingData.push(newPost);
+    // existingData.push(newPost);
 
-    // Write the updated data back to the file
-    fs.writeFileSync(dataFilePath, JSON.stringify(existingData, null, 2), 'utf8');
+    // fs.writeFileSync(dataFilePath, JSON.stringify(existingData, null, 2), 'utf8');
     res.render('WorkInProgress');
     res.redirect('/');
   } catch (error) {

@@ -21,8 +21,9 @@ npm install
 
 ## Usage
 
-```sh
 To start the development server, run:
+
+```sh
 nodemon index.js
 ```
 

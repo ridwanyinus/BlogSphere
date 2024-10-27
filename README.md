@@ -13,6 +13,19 @@
 
 ### ✨ [Demo](https://blog-spherex.onrender.com/)
 
+## Install
+
+```sh
+npm install
+```
+
+## Usage
+
+```sh
+To start the development server, run:
+nodemon index.js
+```
+
 ## Author
 
 👤 **Ridwan Yunus**
@@ -27,3 +40,7 @@ Give a ⭐️ if this project helped you!
 ---
 
 _This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
+
+```
+
+```

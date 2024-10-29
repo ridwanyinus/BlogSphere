@@ -9,7 +9,7 @@
   </a>
 </p>
 
-> BlogSphere is a simple blogging platform built with Node.js, Express, and MongoDB, designed for seamless content creation and management. It provides features such as image uploads, author details, and RESTful API routes, making it easy for users to publish and explore dynamic content.
+> BlogSphere is a simple blogging platform built with Node.js, Express, and MongoDB, designed for seamless content creation and management. It provides features such as image uploads, author details, and RESTful API routes, making it easy for users to publish and explore dynamic content.Note: Full functionality is available on desktop viewports and up only.
 
 ### ✨ [Demo](https://blog-spherex.onrender.com/)
 

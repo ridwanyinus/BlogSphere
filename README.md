@@ -26,6 +26,11 @@ To start the development server, run:
 ```sh
 nodemon index.js
 ```
+## Run tests
+
+```sh
+npm run test
+```
 
 ## Author
 
@@ -36,12 +41,4 @@ nodemon index.js
 
 ## Show your support
 
-Give a ⭐️ if this project helped you!
-
----
-
-_This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
-
-```
-
-```
+Give a ⭐️ if you like this project!
